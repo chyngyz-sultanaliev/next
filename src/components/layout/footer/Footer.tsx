@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={sass.footer_contact}>
-            <h2 className={sass.gradientText}>+7 (812) 325-50-55</h2>
+            <h2>+7 (812) 325-50-55</h2>
             <span>Перезвоним Вам</span>
           </div>
         </div>

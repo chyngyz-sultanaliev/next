@@ -21,7 +21,6 @@
   color: rgba(68, 68, 78, 1);
 }
 
-
 .icon {
   display: flex;
   justify-content: center;
@@ -57,10 +56,15 @@
 }
 
 .iconWithText {
-  width: 90px;
+  width: 95px;
   height: 90px;
+  font-family: Gilroy;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 4%;
+  text-align: center;
   .icon {
-    font-size: 26px;
+    font-size: 40px;
     width: 45px;
     height: 45px;
   }

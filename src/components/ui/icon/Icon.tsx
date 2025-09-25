@@ -13,7 +13,7 @@ interface IconButtonProps {
 }
 
 const Icon: React.FC<IconButtonProps> = ({
-  href = "#",
+  href = "/#",
   icon,
   text,
   colorText = true,
