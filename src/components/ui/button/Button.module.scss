@@ -1,0 +1,26 @@
+.button {
+  background: radial-gradient(
+    106.03% 136.67% at 50% 0%,
+    #ffc400 0%,
+    #ff9900 100%
+  );
+  border-radius: 30px;
+  padding: 15px;
+  color: rgba(68, 68, 78, 1);
+  font-weight: 500;
+  font-size: 16px;
+  font-style: medium;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.01);
+  background: radial-gradient(
+    106.03% 136.67% at 50% 0%,
+    #ffc400 50%,
+    #ff9900 100%
+  );
+}

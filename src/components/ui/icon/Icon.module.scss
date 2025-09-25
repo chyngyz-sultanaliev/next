@@ -1,0 +1,102 @@
+.button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+  &:hover {
+    opacity: 0.85;
+  }
+}
+.white {
+  color: white;
+}
+
+.black {
+  color: rgba(68, 68, 78, 1);
+}
+
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roundIcon {
+  border-radius: 50%;
+}
+
+.br12 {
+  border-radius: 12px;
+}
+
+.rectangular.iconOnly {
+  width: 50px;
+  height: 40px;
+  .icon {
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.iconOnly {
+  width: 50px;
+  height: 50px;
+  .icon {
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.iconWithText {
+  width: 90px;
+  height: 90px;
+  .icon {
+    font-size: 26px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.text {
+  display: inline-block;
+}
+
+.transparent {
+  background: transparent;
+}
+.radial {
+  background: radial-gradient(
+    106.03% 136.67% at 50% 0%,
+    #ffc400 0%,
+    #ff9900 100%
+  );
+}
+
+.linear {
+  background: linear-gradient(
+    139.57deg,
+    rgba(40, 169, 234, 0.3) 0%,
+    #28a9ea 100%
+  );
+}
+
+.greenLinear {
+  background: linear-gradient(
+    139.57deg,
+    rgba(0, 215, 41, 0.3) 0%,
+    #00d729 100%
+  );
+}
+
+.solid {
+  background: rgba(0, 119, 255, 1);
+}
