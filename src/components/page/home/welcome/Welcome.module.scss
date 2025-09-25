@@ -1,0 +1,57 @@
+.welcome {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 105vh;
+  background-image: url("../../../../assets/image/welcome.png");
+  background-size: cover;
+  .welcome_content {
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    h1 {
+      font-weight: 500;
+      font-size: 45px;
+      line-height: 130%;
+      text-transform: uppercase;
+      color: rgba(48, 48, 48, 1);
+      span {
+        background: radial-gradient(
+          106.03% 136.67% at 50% 0%,
+          #ffc400 0%,
+          #ff9900 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 130%;
+      span {
+        background: radial-gradient(
+          106.03% 136.67% at 50% 0%,
+          #ffc400 0%,
+          #ff9900 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+  }
+  .welcome_icons {
+    position: absolute;
+    right: 0;
+    top: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
