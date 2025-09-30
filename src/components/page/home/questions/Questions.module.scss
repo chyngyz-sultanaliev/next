@@ -1,15 +1,16 @@
 .questions {
   position: relative;
   padding: 150px 0;
-  background-image: url("./../../../../assets/image/questions2.png");
-  background-repeat: no-repeat;
-  background-position: right center;
   --c: 20px;
   height: 80vh;
   width: 100%;
   margin-bottom: -30px;
   background: #fff;
   mask: radial-gradient(60% var(--c) at bottom, #0000 calc(100% - 2px), #000);
+  background-image: url("./../../../../assets/image/questions2.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 40%;
   img {
     position: absolute;
     z-index: 9;

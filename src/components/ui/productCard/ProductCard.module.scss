@@ -1,0 +1,93 @@
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0px 27px 35px -35px rgba(36, 67, 96, 0.4),
+    0px -8px 39px -20px rgba(36, 67, 96, 0.2);
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  gap: 10px;
+  .img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 200px;
+  }
+
+  .name {
+    font-weight: 800;
+    font-size: 18px;
+    font-style: Bold;
+    letter-spacing: 1.1;
+    color: rgba(68, 68, 78, 1);
+  }
+
+  .info {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(68, 68, 78, 1);
+      }
+    }
+  }
+
+  .price {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    letter-spacing: -5%;
+    color: rgba(68, 68, 78, 1);
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(117, 132, 153, 1);
+    }
+  }
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(68, 68, 78, 1);
+  }
+
+  .selects {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+
+    &:focus {
+      border-color: #ff9900;
+    }
+  }
+  .actions {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

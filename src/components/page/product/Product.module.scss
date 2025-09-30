@@ -1,0 +1,95 @@
+.product {
+  position: relative;
+  padding: 40px 0;
+  .product_icons {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .title {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 56px;
+    margin-bottom: 30px;
+    background: radial-gradient(
+      106.03% 136.67% at 50% 0%,
+      #ffc400 0%,
+      #ff9900 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .category {
+    margin-bottom: 60px;
+  }
+
+  .categoryTitle {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 40px;
+    text-transform: uppercase;
+    background: linear-gradient(
+      269.73deg,
+      #4b4a53 9.23%,
+      #808086 54.08%,
+      #4b4a53 99.88%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease forwards;
+
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

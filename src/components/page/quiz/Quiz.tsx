@@ -199,13 +199,12 @@ const Quiz = () => {
                     />
                   </div>
                 ))}
-                <Button>Рассчитать стоимость</Button>
               </div>
             )}
             <div className={sass.btns}>
               {stepIndex > 0 && <Button  onClick={handlePrev}>Назад</Button>}
               <Button onClick={handleNext} disabled={!canProceed}>
-                {stepIndex === totalSteps - 1 ? "Завершить" : "Далее"}
+                {stepIndex === totalSteps - 1 ? "Рассчитать стоимость" : "Далее"}
               </Button>
             </div>
           </div>
