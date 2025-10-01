@@ -7,9 +7,6 @@ import Icon from "@/components/ui/icon/Icon";
 import { CiCalculator2 } from "react-icons/ci";
 import { IoMdPaper } from "react-icons/io";
 import { FiPhoneCall } from "react-icons/fi";
-import Quiz from "../quiz/Quiz";
-import Questions from "../home/questions/Questions";
-import Reviews from "../home/reviews/Reviews";
 
 const data = {
   filters: [
@@ -29,8 +26,8 @@ const data = {
           price: "433",
           img: "",
           brand: "Grande Line",
-          maxLength: 6,
-          minLength: 0.5,
+          waveHeight: 6,
+          stepHeight: 0.5,
           options: {
             color: ["Красный", "Зелёный", "Серый"],
             thickness: ["0.45", "0.5", "0.55"],
@@ -43,8 +40,8 @@ const data = {
           price: "433",
           img: "",
           brand: "Grande Line",
-          maxLength: 6,
-          minLength: 0.5,
+          waveHeight: 6,
+          stepHeight: 0.5,
           options: {
             color: ["Коричневый", "Чёрный"],
             thickness: ["0.45", "0.5"],
@@ -57,8 +54,8 @@ const data = {
           price: "433",
           img: "",
           brand: "Grande Line",
-          maxLength: 6,
-          minLength: 0.5,
+          waveHeight: 6,
+          stepHeight: 0.5,
           options: {
             color: ["Красный", "Зелёный", "Серый"],
             thickness: ["0.45", "0.5", "0.55"],
@@ -71,8 +68,8 @@ const data = {
           price: "433",
           img: "",
           brand: "Grande Line",
-          maxLength: 6,
-          minLength: 0.5,
+          waveHeight: 6,
+          stepHeight: 0.5,
           options: {
             color: ["Коричневый", "Чёрный"],
             thickness: ["0.45", "0.5"],
@@ -91,8 +88,8 @@ const data = {
           price: "246",
           img: "",
           brand: "Grande Line",
-          maxLength: 12,
-          minLength: 0.5,
+          waveHeight: 12,
+          stepHeight: 0.5,
           options: {
             color: ["Оцинкованный", "Белый", "Коричневый"],
             thickness: ["0.4", "0.45", "0.5"],
@@ -105,8 +102,8 @@ const data = {
           price: "278",
           img: "",
           brand: "Grande Line",
-          maxLength: 12,
-          minLength: 0.5,
+          waveHeight: 12,
+          stepHeight: 0.5,
           options: {
             color: ["Оцинкованный", "Серый"],
             thickness: ["0.4", "0.45", "0.5"],
@@ -119,8 +116,8 @@ const data = {
           price: "246",
           img: "",
           brand: "Grande Line",
-          maxLength: 12,
-          minLength: 0.5,
+          waveHeight: 12,
+          stepHeight: 0.5,
           options: {
             color: ["Оцинкованный", "Белый", "Коричневый"],
             thickness: ["0.4", "0.45", "0.5"],
@@ -133,8 +130,8 @@ const data = {
           price: "278",
           img: "",
           brand: "Grande Line",
-          maxLength: 12,
-          minLength: 0.5,
+          waveHeight: 12,
+          stepHeight: 0.5,
           options: {
             color: ["Оцинкованный", "Серый"],
             thickness: ["0.4", "0.45", "0.5"],
@@ -153,8 +150,8 @@ const data = {
           price: "655",
           img: "",
           brand: "Grande Line",
-          maxLength: 6,
-          minLength: 0.5,
+          waveHeight: 6,
+          stepHeight: 0.5,
           options: {
             color: ["Красный", "Серый"],
             thickness: ["0.45", "0.5"],
@@ -167,8 +164,8 @@ const data = {
           price: "690",
           img: "",
           brand: "Grande Line",
-          maxLength: 6,
-          minLength: 0.5,
+          waveHeight: 6,
+          stepHeight: 0.5,
           options: {
             color: ["Чёрный", "Синий"],
             thickness: ["0.45", "0.5"],
@@ -181,8 +178,8 @@ const data = {
           price: "655",
           img: "",
           brand: "Grande Line",
-          maxLength: 6,
-          minLength: 0.5,
+          waveHeight: 6,
+          stepHeight: 0.5,
           options: {
             color: ["Красный", "Серый"],
             thickness: ["0.45", "0.5"],
@@ -195,8 +192,8 @@ const data = {
           price: "690",
           img: "",
           brand: "Grande Line",
-          maxLength: 6,
-          minLength: 0.5,
+          waveHeight: 6,
+          stepHeight: 0.5,
           options: {
             color: ["Чёрный", "Синий"],
             thickness: ["0.45", "0.5"],
@@ -217,7 +214,6 @@ const Product = () => {
       : data.categories.filter((cat) => cat.filter === activeFilter);
 
   return (
-    <>
       <section className={sass.product}>
         <div className="container">
           <h1 className={sass.title}>КАТАЛОГ ТОВАРОВ</h1>
@@ -267,10 +263,6 @@ const Product = () => {
           />
         </div>
       </section>
-      <Quiz/>
-      <Questions/>
-      <Reviews/>
-    </>
   );
 };
 

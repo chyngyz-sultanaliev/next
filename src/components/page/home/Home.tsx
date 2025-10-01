@@ -1,3 +1,4 @@
+import Product from "../product/Product";
 import Quiz from "../quiz/Quiz";
 import About from "./about/About";
 import sass from "./Home.module.scss";
@@ -11,6 +12,7 @@ const Home = () => {
       <Welcome />
       <About />
       <Quiz />
+      <Product/>
       <Questions />
       <Reviews />
     </div>

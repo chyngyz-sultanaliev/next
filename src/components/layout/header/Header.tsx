@@ -6,13 +6,15 @@ import Logo from "./../../../assets/image/logo.png";
 import Button from "@/components/ui/button/Button";
 import Icon from "@/components/ui/icon/Icon";
 import { FaTelegramPlane, FaVk, FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 const Header = () => {
   return (
     <header className={sass.header}>
       <div className="container">
         <div className={sass.header_nav}>
           <div className={sass.header_logo}>
-            <Image src={Logo} width={70} height={60} alt="logo.png" />
+           <Link href={"/"}>
+            <Image src={Logo} width={70} height={60} alt="logo.png" /></Link>
             <div className={sass.header_divider}></div>
             <span>
               Санкт-Петербург, <br /> Горелово, <br />

@@ -1,5 +1,5 @@
-import Product from "@/components/page/product/Product";
+import ProductPage from "@/components/page/product/ProductPage";
 
-const page = () => <Product />;
+const page = () => <ProductPage />;
 
 export default page;

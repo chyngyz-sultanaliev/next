@@ -10,8 +10,8 @@ interface Product {
   price: string;
   img?: string;
   brand: string;
-  maxLength: number;
-  minLength: number;
+  waveHeight: number;
+  stepHeight: number;
   options: {
     color: string[];
     thickness: string[];
@@ -42,11 +42,11 @@ const ProductCard = ({ el }: ProductCardProps) => {
         </div>
         <div className={sass.row}>
           <span>Высота волны, мм</span>
-          <span>{el.maxLength}</span>
+          <span>{el.waveHeight}</span>
         </div>
         <div className={sass.row}>
           <span>Высота ступеньки, мм</span>
-          <span>{el.minLength}</span>
+          <span>{el.stepHeight}</span>
         </div>
       </div>
       <p className={sass.price}>
