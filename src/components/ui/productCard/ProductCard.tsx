@@ -4,6 +4,7 @@ import sass from "./ProductCard.module.scss";
 import cardImg from "./../../../assets/image/product.png";
 import Image from "next/image";
 import Button from "../button/Button";
+import Form from "@/components/page/form/Form";
 interface Product {
   id: number;
   name: string;
@@ -81,7 +82,11 @@ const ProductCard = ({ el }: ProductCardProps) => {
         </label>
       </div>
       <div className={sass.actions}>
-        <Button variant="primary">Рассчитать стоимость</Button>
+        <Form
+          title="Металлочерепица Classic"
+          subtitle="Оставьте ваш номер телефона и мы перезвоним вам в ближайшее время для расчета стоимости кровли"
+          trigger={<Button>Рассчитать стоимость</Button>}
+        />
         <Button
           variant="secondary"
           onClick={() => router.push(`/productId/${el.id}`)}

@@ -9,6 +9,7 @@ import Questions from "../home/questions/Questions";
 import Reviews from "../home/reviews/Reviews";
 import Product from "../product/Product";
 import Quiz from "../quiz/Quiz";
+import Form from "../form/Form";
 
 const data = {
   filters: [
@@ -213,6 +214,7 @@ interface ProductIdProps {
 
 const ProductId = ({ id }: ProductIdProps) => {
   const productId = Number(id);
+  const [showForm, setShowForm] = useState(false);
 
   const product = data.categories
     .flatMap((cat) => cat.products)
@@ -309,8 +311,11 @@ const ProductId = ({ id }: ProductIdProps) => {
                     </select>
                   </div>
                 </div>
-
-                <Button>Рассчитать стоимость</Button>
+                <Form
+                  title="Металлочерепица Classic"
+                  subtitle="Оставьте ваш номер телефона и мы перезвоним вам в ближайшее время для расчета стоимости кровли"
+                  trigger={<Button>Рассчитать стоимость</Button>}
+                />
               </div>
             </div>
 

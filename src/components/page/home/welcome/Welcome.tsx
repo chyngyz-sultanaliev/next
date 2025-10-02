@@ -6,6 +6,7 @@ import Icon from "@/components/ui/icon/Icon";
 import { CiCalculator2 } from "react-icons/ci";
 import { IoMdPaper } from "react-icons/io";
 import { FiPhoneCall } from "react-icons/fi";
+import Form from "../../form/Form";
 
 const Welcome = () => {
   return (
@@ -27,7 +28,11 @@ const Welcome = () => {
             </span>{" "}
             под ваш объект <br />с точностью 97% и получите подарки
           </p>
-          <Button>РАССЧИТАТЬ СТОИМОСТЬ МАТЕРИАЛОВ</Button>
+          <Form
+            title="Металлочерепица Classic"
+            subtitle="Оставьте ваш номер телефона и мы перезвоним вам в ближайшее время для расчета стоимости кровли"
+            trigger={<Button>РАССЧИТАТЬ СТОИМОСТЬ МАТЕРИАЛОВ</Button>}
+          />
         </div>
       </div>
       <div className={sass.welcome_icons}>
