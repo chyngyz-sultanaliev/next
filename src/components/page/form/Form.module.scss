@@ -1,0 +1,116 @@
+.formWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* затемнение + картинка */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./../../../assets/image/modal.png") no-repeat center center;
+  background-size: cover;
+
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 40px;
+  width: 520px;
+  text-align: center;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 28px;
+  text-align: center;
+  color: rgba(68, 68, 78, 1);
+}
+
+.subtitle {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  text-align: center;
+  color: rgba(105, 104, 111, 1);
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #e5e5e5;
+  border-radius: 50px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    color: #b3b3b3;
+  }
+
+  &:focus {
+    border-color: #f8b500;
+    box-shadow: 0px 0px 6px rgba(248, 181, 0, 0.4);
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: rgba(68, 68, 78, 1);
+  background: radial-gradient(
+    106.03% 136.67% at 50% 0%,
+    #ffc400 0%,
+    #ff9900 100%
+  );
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+}
+
+.notice {
+  font-size: 11px;
+  color: #999;
+  line-height: 1.4;
+}
+.checkbox {
+  font-size: 11px;
+  color: #999;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  input {
+    margin-top: 4px;
+    accent-color: #ff9c00;
+    cursor: pointer;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(105, 104, 111, 1);
+  }
+}

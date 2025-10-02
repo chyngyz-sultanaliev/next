@@ -28,6 +28,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 6,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Красный", "Зелёный", "Серый"],
             thickness: ["0.45", "0.5", "0.55"],
@@ -42,6 +43,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 6,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Коричневый", "Чёрный"],
             thickness: ["0.45", "0.5"],
@@ -56,6 +58,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 6,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Красный", "Зелёный", "Серый"],
             thickness: ["0.45", "0.5", "0.55"],
@@ -70,6 +73,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 6,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Коричневый", "Чёрный"],
             thickness: ["0.45", "0.5"],
@@ -90,6 +94,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 12,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Оцинкованный", "Белый", "Коричневый"],
             thickness: ["0.4", "0.45", "0.5"],
@@ -104,6 +109,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 12,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Оцинкованный", "Серый"],
             thickness: ["0.4", "0.45", "0.5"],
@@ -118,6 +124,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 12,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Оцинкованный", "Белый", "Коричневый"],
             thickness: ["0.4", "0.45", "0.5"],
@@ -132,6 +139,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 12,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Оцинкованный", "Серый"],
             thickness: ["0.4", "0.45", "0.5"],
@@ -152,6 +160,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 6,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Красный", "Серый"],
             thickness: ["0.45", "0.5"],
@@ -166,6 +175,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 6,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Чёрный", "Синий"],
             thickness: ["0.45", "0.5"],
@@ -180,6 +190,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 6,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Красный", "Серый"],
             thickness: ["0.45", "0.5"],
@@ -194,6 +205,7 @@ const data = {
           brand: "Grande Line",
           waveHeight: 6,
           stepHeight: 0.5,
+          fileUrl: "/assets/files/pricelist-classic.pdf", // <--- добавлено
           options: {
             color: ["Чёрный", "Синий"],
             thickness: ["0.45", "0.5"],
@@ -214,55 +226,55 @@ const Product = () => {
       : data.categories.filter((cat) => cat.filter === activeFilter);
 
   return (
-      <section className={sass.product}>
-        <div className="container">
-          <h1 className={sass.title}>КАТАЛОГ ТОВАРОВ</h1>
-          <div className={sass.filters}>
-            {data.filters.map((filter, i) => (
-              <Button
-                key={i}
-                variant={`${activeFilter === filter ? "primary" : "secondary"}`}
-                onClick={() => setActiveFilter(filter)}
-              >
-                {filter}
-              </Button>
-            ))}
-          </div>
-          {filteredCategories.map((cat, i) => (
-            <div key={i} className={sass.category}>
-              <h2 className={sass.categoryTitle}>{cat.title}</h2>
-              <div className={sass.grid}>
-                {cat.products.map((item) => (
-                  <ProductCard key={item.id} el={item} />
-                ))}
-              </div>
-            </div>
+    <section className={sass.product}>
+      <div className="container">
+        <h1 className={sass.title}>КАТАЛОГ ТОВАРОВ</h1>
+        <div className={sass.filters}>
+          {data.filters.map((filter, i) => (
+            <Button
+              key={i}
+              variant={`${activeFilter === filter ? "primary" : "secondary"}`}
+              onClick={() => setActiveFilter(filter)}
+            >
+              {filter}
+            </Button>
           ))}
         </div>
-        <div className={sass.product_icons}>
-          <Icon
-            href="/#"
-            icon={<CiCalculator2 />}
-            roundIcon={false}
-            bgType="radial"
-            text="Произвести   расчет"
-          />
-          <Icon
-            href="/#"
-            icon={<IoMdPaper />}
-            roundIcon={false}
-            bgType="radial"
-            text="Произвести   расчет"
-          />
-          <Icon
-            href="/#"
-            icon={<FiPhoneCall />}
-            roundIcon={false}
-            bgType="radial"
-            text="Произвести   расчет"
-          />
-        </div>
-      </section>
+        {filteredCategories.map((cat, i) => (
+          <div key={i} className={sass.category}>
+            <h2 className={sass.categoryTitle}>{cat.title}</h2>
+            <div className={sass.grid}>
+              {cat.products.map((item) => (
+                <ProductCard key={item.id} el={item} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className={sass.product_icons}>
+        <Icon
+          href="/#"
+          icon={<CiCalculator2 />}
+          roundIcon={false}
+          bgType="radial"
+          text="Произвести   расчет"
+        />
+        <Icon
+          href="/#"
+          icon={<IoMdPaper />}
+          roundIcon={false}
+          bgType="radial"
+          text="Произвести   расчет"
+        />
+        <Icon
+          href="/#"
+          icon={<FiPhoneCall />}
+          roundIcon={false}
+          bgType="radial"
+          text="Произвести   расчет"
+        />
+      </div>
+    </section>
   );
 };
 
